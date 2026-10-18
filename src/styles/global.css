@@ -1,0 +1,87 @@
+.section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.section-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 65px;
+}
+
+.section-heading.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #38bdf8;
+}
+
+.section-heading.centered .section-label::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #38bdf8;
+}
+
+.section-heading h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #f8fafc;
+}
+
+.section-heading h2 span {
+  color: #64748b;
+}
+
+.section-heading p {
+  color: #94a3b8;
+  line-height: 1.8;
+  margin-top: 22px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 85px 0;
+  }
+
+  .section-container {
+    width: min(100% - 30px, 600px);
+  }
+
+  .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 82px);
+  padding-top: 40px;
+}

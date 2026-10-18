@@ -1,0 +1,501 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  background: #091522;
+}
+
+
+/* =========================================================
+   ABOUT GRID
+========================================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   IMAGE CARD
+========================================================= */
+
+.about-image-card {
+  height: 480px;
+  width: 100%;
+
+  position: relative;
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(56, 189, 248, 0.09),
+      transparent 50%
+    ),
+    #0b1929;
+
+  border-radius: 18px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.about-image-card::before,
+.about-image-card::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(56, 189, 248, 0.1);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-image-card::before {
+  width: 360px;
+  height: 360px;
+}
+
+
+.about-image-card::after {
+  width: 250px;
+  height: 250px;
+}
+
+
+/* =========================================================
+   IMAGE CONTAINER
+========================================================= */
+
+.about-image-placeholder {
+  position: relative;
+
+  width: 290px;
+  height: 290px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.profile-image {
+  display: block;
+
+  width: 250px;
+  height: 250px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  position: relative;
+
+  z-index: 6;
+
+  border: 4px solid rgba(56, 189, 248, 0.45);
+
+  background: #0b1929;
+
+  box-shadow:
+    0 0 35px rgba(14, 165, 233, 0.25),
+    0 0 80px rgba(14, 165, 233, 0.12);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Image hover */
+
+.about-image-card:hover .profile-image {
+  transform: scale(1.03);
+
+  box-shadow:
+    0 0 45px rgba(14, 165, 233, 0.35),
+    0 0 100px rgba(14, 165, 233, 0.18);
+}
+
+
+/* =========================================================
+   ROTATING PROFILE RING
+========================================================= */
+
+.profile-ring {
+  position: absolute;
+
+  width: 285px;
+  height: 285px;
+
+  border: 1px dashed rgba(56, 189, 248, 0.55);
+
+  border-radius: 50%;
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  animation: rotateProfile 15s linear infinite;
+}
+
+
+@keyframes rotateProfile {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
+.experience-card {
+  position: absolute;
+
+  bottom: 25px;
+  left: 25px;
+
+  padding: 15px 18px;
+
+  background: rgba(8, 19, 33, 0.92);
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  z-index: 10;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.experience-card strong {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 27px;
+
+  color: #38bdf8;
+}
+
+
+.experience-card span {
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+
+.about-content > p {
+  margin-bottom: 18px;
+}
+
+
+/* Main intro */
+
+.about-content .about-intro {
+  color: #e2e8f0;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ABOUT FEATURES
+========================================================= */
+
+.about-features {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  margin-bottom: 30px;
+}
+
+
+/* Feature */
+
+.about-feature {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 17px;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+
+  border-radius: 9px;
+
+  background: rgba(15, 31, 49, 0.4);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.about-feature:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(56, 189, 248, 0.25);
+
+  background: rgba(15, 31, 49, 0.7);
+}
+
+
+/* Feature Icon */
+
+.feature-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 7px;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  color: #38bdf8;
+}
+
+
+/* Feature Heading */
+
+.about-feature h4 {
+  font-size: 12px;
+
+  color: #e2e8f0;
+
+  margin-bottom: 3px;
+}
+
+
+/* Feature Text */
+
+.about-feature p {
+  font-size: 10px;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   TEXT LINK
+========================================================= */
+
+.text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #38bdf8;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.text-link:hover {
+  color: #7dd3fc;
+}
+
+
+.text-link svg {
+  transition: 0.2s;
+}
+
+
+.text-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+
+  .about-image-card {
+    height: 400px;
+
+    max-width: 550px;
+
+    margin: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-image-card {
+    height: 350px;
+  }
+
+
+  .about-image-placeholder {
+    width: 230px;
+    height: 230px;
+  }
+
+
+  .profile-image {
+    width: 195px;
+    height: 195px;
+  }
+
+
+  .profile-ring {
+    width: 225px;
+    height: 225px;
+  }
+
+
+  .about-image-card::before {
+    width: 280px;
+    height: 280px;
+  }
+
+
+  .about-image-card::after {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .experience-card {
+    bottom: 15px;
+
+    left: 15px;
+
+    padding: 12px 14px;
+  }
+
+
+  .experience-card strong {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about-image-card {
+    height: 320px;
+  }
+
+
+  .about-image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .profile-image {
+    width: 170px;
+    height: 170px;
+  }
+
+
+  .profile-ring {
+    width: 195px;
+    height: 195px;
+  }
+
+
+  .experience-card {
+    left: 10px;
+
+    bottom: 10px;
+  }
+
+}

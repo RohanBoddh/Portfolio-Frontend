@@ -1,0 +1,85 @@
+.services-section {
+  background: #091522;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.service-card {
+  padding: 28px;
+  min-height: 245px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  background: #0b1929;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  font-size: 21px;
+}
+
+.service-top > span {
+  font-family: "Poppins", sans-serif;
+  color: #24364b;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.service-card h3 {
+  margin-top: 27px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #e2e8f0;
+}
+
+.service-card p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.service-line {
+  width: 30px;
+  height: 2px;
+  margin-top: 25px;
+  background: #38bdf8;
+  transition: 0.3s ease;
+}
+
+.service-card:hover .service-line {
+  width: 60px;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
