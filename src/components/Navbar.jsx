@@ -95,11 +95,11 @@ function Navbar() {
           </NavLink>
 
           <div className="mobile-socials">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a href="https://github.com/RohanBoddh" target="_blank" rel="noreferrer">
               <FiGithub />
             </a>
 
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/rohan-boddh-b87100307/" target="_blank" rel="noreferrer">
               <FiLinkedin />
             </a>
           </div>
@@ -107,7 +107,7 @@ function Navbar() {
 
         <div className="nav-right">
           <a
-            href="https://github.com/"
+            href="https://github.com/RohanBoddh"
             target="_blank"
             rel="noreferrer"
             className="nav-social"
@@ -116,7 +116,7 @@ function Navbar() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/rohan-boddh-b87100307/"
             target="_blank"
             rel="noreferrer"
             className="nav-social"

@@ -47,7 +47,7 @@ function Footer() {
           <div className="footer-socials">
 
             <a
-              href="https://github.com/"
+              href="https://github.com/RohanBoddh"
               target="_blank"
               rel="noreferrer"
             >
@@ -55,7 +55,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/rohan-boddh-b87100307/"
               target="_blank"
               rel="noreferrer"
             >
