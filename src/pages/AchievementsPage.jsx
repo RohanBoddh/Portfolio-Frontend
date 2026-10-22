@@ -33,6 +33,51 @@ const CERTIFICATES_DATA = [
     verified: true,
   },
   {
+    id: "sih-2026",
+    title: "Internal Smart India Hackathon 2026 (SIH 2026)",
+    issuer: "AIC-GBU Incubation Centre & CRC, Gautam Buddha University",
+    date: "September 12, 2026",
+    category: "hackathons",
+    type: "National Hackathon",
+    credentialId: "AIC-GBU / CRC / SIH-2026 (Team SAMARTH)",
+    pdfUrl: "/certificates/Smart_India_Hackathon_2026_Certificate.png",
+    description:
+      "Selected and participated in the Internal Smart India Hackathon 2026, organized by AIC-GBU Incubation Centre and Corporate Relations Cell at Gautam Buddha University. Represented Team SAMARTH to ideate and prototype high-impact technological solutions for national challenges.",
+    skills: ["Smart India Hackathon", "Team SAMARTH", "Prototyping", "Problem Solving", "MoE / AICTE"],
+    icon: <FiAward />,
+    verified: true,
+  },
+  {
+    id: "sih-2025",
+    title: "Internal Smart India Hackathon 2025 (SIH 2025)",
+    issuer: "Corporate Relations Cell, USICT, Gautam Buddha University",
+    date: "September 19-20, 2025",
+    category: "hackathons",
+    type: "National Hackathon",
+    credentialId: "GBU/CRC/SIH/2025/130 (Team CodeX)",
+    pdfUrl: "/certificates/Smart_India_Hackathon_2025_Certificate.jpg",
+    description:
+      "Awarded Certificate of Participation in the Internal Smart India Hackathon 2025 organized by Corporate Relations Cell at University School of Information and Communication Technology (USICT), Gautam Buddha University. Competed as part of Team CodeX in an intense hackathon solving complex technological problem statements.",
+    skills: ["Smart India Hackathon", "Team CodeX", "Full-Stack Dev", "Innovation", "USICT GBU"],
+    icon: <FiAward />,
+    verified: true,
+  },
+  {
+    id: "krishan-enterprises",
+    title: "Web Development & Management Summer Training Letter",
+    issuer: "Krishan Enterprises",
+    date: "July 01, 2026 – August 28, 2026",
+    category: "experience",
+    type: "Summer Training",
+    credentialId: "KE/ST/2026 | Verified 30 Aug 2026",
+    pdfUrl: "/certificates/Krishan_Enterprises_Summer_Training_Letter.png",
+    description:
+      "Successfully completed an extensive Summer Training program at Krishan Enterprises. Led the development and operational management of the live corporate web platform (krishanenterprises.in), integrated online payment processing workflows, and maintained Annual Maintenance Contract (AMC) operations.",
+    skills: ["Website Management", "Payment Methods", "AMC Operations", "Live Web Deployment"],
+    icon: <FiCode />,
+    verified: true,
+  },
+  {
     id: "bcg-genai",
     title: "BCG X - GenAI Job Simulation Certificate",
     issuer: "BCG X & Forage",
@@ -157,8 +202,9 @@ const CERTIFICATES_DATA = [
 
 const CATEGORIES = [
   { id: "all", label: "All Credentials" },
-  { id: "ai", label: "AI & GenAI" },
+  { id: "hackathons", label: "Hackathons & Competitions" },
   { id: "experience", label: "Internships & Experience" },
+  { id: "ai", label: "AI & GenAI" },
   { id: "web", label: "Web & Programming" },
 ];
 
@@ -212,13 +258,13 @@ function AchievementsPage() {
               <FiCheckCircle /> {CERTIFICATES_DATA.length} Verified Credentials
             </span>
             <span className="page-chip">
+              <FiAward /> 2x Smart India Hackathon
+            </span>
+            <span className="page-chip">
               <FiCpu /> Oracle Certified GenAI
             </span>
             <span className="page-chip">
-              <FiAward /> BCG X AI Simulation
-            </span>
-            <span className="page-chip">
-              <FiCode /> Full-Stack & Web Development
+              <FiCode /> Summer Training & Internships
             </span>
           </div>
 
@@ -226,11 +272,31 @@ function AchievementsPage() {
           <div className="achievements-stats-grid">
             <div className="achievement-stat-card">
               <div className="stat-icon-wrapper">
-                <FiAward />
+                <FiCheckCircle />
               </div>
               <div className="stat-info">
                 <span className="stat-value">{CERTIFICATES_DATA.length}</span>
-                <span className="stat-label">Total Verified Credentials</span>
+                <span className="stat-label">Total Credentials</span>
+              </div>
+            </div>
+
+            <div className="achievement-stat-card">
+              <div className="stat-icon-wrapper">
+                <FiAward />
+              </div>
+              <div className="stat-info">
+                <span className="stat-value">2</span>
+                <span className="stat-label">Hackathons & SIH</span>
+              </div>
+            </div>
+
+            <div className="achievement-stat-card">
+              <div className="stat-icon-wrapper">
+                <FiCode />
+              </div>
+              <div className="stat-info">
+                <span className="stat-value">3</span>
+                <span className="stat-label">Internships & Training</span>
               </div>
             </div>
 
@@ -241,16 +307,6 @@ function AchievementsPage() {
               <div className="stat-info">
                 <span className="stat-value">2</span>
                 <span className="stat-label">AI & GenAI Certifications</span>
-              </div>
-            </div>
-
-            <div className="achievement-stat-card">
-              <div className="stat-icon-wrapper">
-                <FiCode />
-              </div>
-              <div className="stat-info">
-                <span className="stat-value">2</span>
-                <span className="stat-label">Internship Selections</span>
               </div>
             </div>
 
@@ -275,7 +331,7 @@ function AchievementsPage() {
               Verified <span>Credentials</span> & Documents
             </h2>
             <p className="extra-subtitle">
-              Explore individual credentials below with direct PDF previews and document downloads.
+              Explore individual credentials below with direct document previews and certificate downloads.
             </p>
           </div>
 
@@ -346,7 +402,7 @@ function AchievementsPage() {
                       onClick={() => openPreview(cert.pdfUrl, cert.title)}
                     >
                       <FiEye size={15} />
-                      Preview PDF
+                      Preview Document
                     </button>
 
                     <a
@@ -367,7 +423,7 @@ function AchievementsPage() {
         </div>
       </section>
 
-      {/* PDF Preview Modal */}
+      {/* Document Preview Modal */}
       {activeModalPdf && (
         <div className="cert-modal-backdrop" onClick={closeModal}>
           <div className="cert-modal-dialog" onClick={(e) => e.stopPropagation()}>
@@ -385,11 +441,21 @@ function AchievementsPage() {
               </button>
             </div>
             <div className="cert-modal-body">
-              <iframe
-                src={`${activeModalPdf}#toolbar=1`}
-                title={activeModalTitle}
-                className="cert-modal-iframe"
-              />
+              {activeModalPdf && /\.(png|jpe?g|webp)$/i.test(activeModalPdf) ? (
+                <div className="cert-modal-img-container">
+                  <img
+                    src={activeModalPdf}
+                    alt={activeModalTitle}
+                    className="cert-modal-img"
+                  />
+                </div>
+              ) : (
+                <iframe
+                  src={`${activeModalPdf}#toolbar=1`}
+                  title={activeModalTitle}
+                  className="cert-modal-iframe"
+                />
+              )}
             </div>
           </div>
         </div>

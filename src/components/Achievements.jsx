@@ -20,6 +20,24 @@ const featuredCertificates = [
     icon: <FiCpu />,
   },
   {
+    title: "Internal Smart India Hackathon 2026 (SIH 2026)",
+    issuer: "AIC-GBU Incubation Centre",
+    date: "September 12, 2026",
+    type: "National Hackathon",
+    skills: ["Team SAMARTH", "Innovation", "Rapid Prototyping"],
+    pdfUrl: "/certificates/Smart_India_Hackathon_2026_Certificate.png",
+    icon: <FiAward />,
+  },
+  {
+    title: "Web Development & Management Summer Training",
+    issuer: "Krishan Enterprises",
+    date: "July - August 2026",
+    type: "Summer Training",
+    skills: ["Web Management", "Payment Methods", "AMC Operations"],
+    pdfUrl: "/certificates/Krishan_Enterprises_Summer_Training_Letter.png",
+    icon: <FiFileText />,
+  },
+  {
     title: "BCG X - GenAI Job Simulation Certificate",
     issuer: "BCG X & Forage",
     date: "August 22, 2025",
@@ -27,15 +45,6 @@ const featuredCertificates = [
     skills: ["AI Financial Chatbot", "Data Analysis", "Python"],
     pdfUrl: "/certificates/BCG_GenAI_Job_Simulation.pdf",
     icon: <FiAward />,
-  },
-  {
-    title: "Full-Stack Development Internship Offer",
-    issuer: "Codveda Technologies",
-    date: "September 12, 2025",
-    type: "Internship Selection",
-    skills: ["Full-Stack Dev", "REST APIs", "Databases"],
-    pdfUrl: "/certificates/Codveda_Internship_Offer_Letter.pdf",
-    icon: <FiFileText />,
   },
 ];
 

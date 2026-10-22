@@ -54,7 +54,8 @@ function Education() {
               <p className="timeline-description">
                 Currently pursuing B.Tech in Computer Science and
                 Engineering with a focus on software development,
-                web technologies, databases and problem solving.
+                web technologies, databases and problem solving. Active
+                participant in Internal Smart India Hackathons (SIH 2025 & 2026).
               </p>
 
             </div>
